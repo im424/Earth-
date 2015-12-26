@@ -12,19 +12,29 @@ import Cocoa
 class Wallpaper {
     let jsonURL = "http://himawari8.nict.go.jp/img/D531106/latest.json"
     var image: NSImage?
+    let workspace = NSWorkspace.sharedWorkspace()
+    let screen = NSScreen.mainScreen()
+    var time: String?
     
     
     
-    
-    
-    func setWallpaper(){
-        getImage()
-        
+    func setWallpaper(url: String){
+        do{
+            try  workspace.setDesktopImageURL(NSURL(fileURLWithPath: "/tmp/himawari8_earth.png") , forScreen: screen!, options: ["NSWorkspaceDesktopImageScalingKey":"2"]) //NSImageScaling.ScaleNone
+            
+        }catch _{
+            print("Fail to set")
+        }
     }
     
+    private func saveImageToTemp(){
+        let imgRep = NSBitmapImageRep(data: self.image!.TIFFRepresentation! )
+        let imgData = (imgRep?.representationUsingType(.NSPNGFileType, properties: [NSImageCompressionFactor: [1.0] ]))!
+        imgData.writeToFile("/tmp/himawari8_earth.png", atomically: true)
+    }
     
-    
-    private func getImage(){
+  
+    func getImage(callback: String -> Void){
        
         getImageURL(){
             (imageURL, error) -> Void in
@@ -33,6 +43,8 @@ class Wallpaper {
                 print("ERROR \(error?.localizedCapitalizedString)")
             }else{
                 self.image = NSURL(string: imageURL).flatMap{NSData(contentsOfURL: $0)}.flatMap{NSImage(data: $0)}
+                self.saveImageToTemp()
+                callback(imageURL)
              }
         }
     }
@@ -50,6 +62,7 @@ class Wallpaper {
                 
                 if let json =  self.parseJson(data!){
                     var data = json["date"] as! String
+                    self.time = data
                     data = data.stringByReplacingOccurrencesOfString(" ", withString: "/")
                     data = data.stringByReplacingOccurrencesOfString("-", withString: "/")
                     data = data.stringByReplacingOccurrencesOfString(":", withString: "")
@@ -84,8 +97,8 @@ class Wallpaper {
         
         do{
             jsonObj = try NSJSONSerialization.JSONObjectWithData(json, options: .AllowFragments)
-        }catch let error as NSError {
-            print("JSON PARSING ERROR \(error.localizedDescription)")
+        }catch _ {
+            print("JSON PARSING ERROR")
             jsonObj = nil
         }
         return jsonObj as! NSDictionary?

@@ -11,9 +11,9 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Himawari8 Wallpaper" id="1Xt-HY-uBw">
+                            <menuItem title="Himawari 8 Wallpaper" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Himawari8 Wallpaper" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Himawari 8 Wallpaper" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="About himawari8Wallpaper" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -91,13 +91,30 @@
                                     <action selector="startButtonDidPress:" target="XfG-lQ-9wD" id="Osh-2k-7Qk"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRy-jO-aUL">
+                                <rect key="frame" x="112" y="100" width="257" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="p9t-K5-gCi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCl-jm-9SQ">
+                                <rect key="frame" x="113" y="75" width="257" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Images from Himawar8.nict.go.jp" id="ya3-uv-pyI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuw-H0-3OB">
-                                <rect key="frame" x="170" y="155" width="143" height="95"/>
+                                <rect key="frame" x="0.0" y="151" width="480" height="119"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Brn-9q-2Y2"/>
                             </imageView>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="imageTimeLabal" destination="sRy-jO-aUL" id="zsY-Sr-nM0"/>
                         <outlet property="perviewImage" destination="Brn-9q-2Y2" id="zo3-Bc-H5B"/>
                         <outlet property="startButton" destination="lNJ-A1-ykd" id="25I-BX-TTx"/>
                     </connections>
