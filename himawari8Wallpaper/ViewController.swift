@@ -10,6 +10,11 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var perviewImage: NSImageCell!
+    @IBOutlet weak var startButton: NSButton!
+    var isRunning = false
+    let wallpaperManger = Wallpaper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +27,22 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func startButtonDidPress(sender: NSButton) {
+        if isRunning {
+            startButton.title = "Stop Running"
+        }else{
+            startButton.title = "Start Running"
+            
+            
+            wallpaperManger.setWallpaper()
+            perviewImage.image = wallpaperManger.image
+            
+        }
+        
+        isRunning = !isRunning
+    }
+    
+    
 
 }
 
