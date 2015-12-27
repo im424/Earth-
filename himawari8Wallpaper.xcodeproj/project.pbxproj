@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4ED469AB1C2F135300438E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469AA1C2F135300438E46 /* AppDelegate.swift */; };
-		4ED469AD1C2F135300438E46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469AC1C2F135300438E46 /* ViewController.swift */; };
-		4ED469AF1C2F135300438E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED469AE1C2F135300438E46 /* Assets.xcassets */; };
+		4ED469AD1C2F135300438E46 /* PanelAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469AC1C2F135300438E46 /* PanelAViewController.swift */; };
 		4ED469B21C2F135300438E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED469B01C2F135300438E46 /* Main.storyboard */; };
 		4ED469BA1C2F193700438E46 /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469B91C2F193700438E46 /* Wallpaper.swift */; };
+		4EE1E36D1C2FB516005F63FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE1E36C1C2FB516005F63FB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4ED469A71C2F135300438E46 /* himawari8Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = himawari8Wallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED469AA1C2F135300438E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ED469AC1C2F135300438E46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4ED469AE1C2F135300438E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ED469AC1C2F135300438E46 /* PanelAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelAViewController.swift; sourceTree = "<group>"; };
 		4ED469B11C2F135300438E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ED469B31C2F135300438E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ED469B91C2F193700438E46 /* Wallpaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
+		4EE1E36C1C2FB516005F63FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +55,10 @@
 			isa = PBXGroup;
 			children = (
 				4ED469AA1C2F135300438E46 /* AppDelegate.swift */,
-				4ED469AC1C2F135300438E46 /* ViewController.swift */,
-				4ED469AE1C2F135300438E46 /* Assets.xcassets */,
+				4ED469AC1C2F135300438E46 /* PanelAViewController.swift */,
 				4ED469B01C2F135300438E46 /* Main.storyboard */,
 				4ED469B91C2F193700438E46 /* Wallpaper.swift */,
+				4EE1E36C1C2FB516005F63FB /* Assets.xcassets */,
 				4ED469B31C2F135300438E46 /* Info.plist */,
 			);
 			path = himawari8Wallpaper;
@@ -97,6 +97,12 @@
 				TargetAttributes = {
 					4ED469A61C2F135300438E46 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5S49H934JS;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -123,7 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED469AF1C2F135300438E46 /* Assets.xcassets in Resources */,
+				4EE1E36D1C2FB516005F63FB /* Assets.xcassets in Resources */,
 				4ED469B21C2F135300438E46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED469AD1C2F135300438E46 /* ViewController.swift in Sources */,
+				4ED469AD1C2F135300438E46 /* PanelAViewController.swift in Sources */,
 				4ED469BA1C2F193700438E46 /* Wallpaper.swift in Sources */,
 				4ED469AB1C2F135300438E46 /* AppDelegate.swift in Sources */,
 			);
@@ -278,6 +284,7 @@
 				4ED469B81C2F135300438E46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

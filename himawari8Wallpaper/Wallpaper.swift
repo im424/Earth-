@@ -62,7 +62,7 @@ class Wallpaper {
                 
                 if let json =  self.parseJson(data!){
                     var data = json["date"] as! String
-                    self.time = data
+                    self.time = "at \(data) UTC"
                     data = data.stringByReplacingOccurrencesOfString(" ", withString: "/")
                     data = data.stringByReplacingOccurrencesOfString("-", withString: "/")
                     data = data.stringByReplacingOccurrencesOfString(":", withString: "")
