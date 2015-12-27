@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4ED469AB1C2F135300438E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469AA1C2F135300438E46 /* AppDelegate.swift */; };
-		4ED469AD1C2F135300438E46 /* PanelAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469AC1C2F135300438E46 /* PanelAViewController.swift */; };
+		4ED469AD1C2F135300438E46 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469AC1C2F135300438E46 /* PanelViewController.swift */; };
 		4ED469B21C2F135300438E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED469B01C2F135300438E46 /* Main.storyboard */; };
 		4ED469BA1C2F193700438E46 /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED469B91C2F193700438E46 /* Wallpaper.swift */; };
 		4EE1E36D1C2FB516005F63FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE1E36C1C2FB516005F63FB /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		4ED469A71C2F135300438E46 /* himawari8Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = himawari8Wallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED469AA1C2F135300438E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ED469AC1C2F135300438E46 /* PanelAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelAViewController.swift; sourceTree = "<group>"; };
+		4ED469AC1C2F135300438E46 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		4ED469B11C2F135300438E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ED469B31C2F135300438E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ED469B91C2F193700438E46 /* Wallpaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				4ED469AA1C2F135300438E46 /* AppDelegate.swift */,
-				4ED469AC1C2F135300438E46 /* PanelAViewController.swift */,
+				4ED469AC1C2F135300438E46 /* PanelViewController.swift */,
 				4ED469B01C2F135300438E46 /* Main.storyboard */,
 				4ED469B91C2F193700438E46 /* Wallpaper.swift */,
 				4EE1E36C1C2FB516005F63FB /* Assets.xcassets */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED469AD1C2F135300438E46 /* PanelAViewController.swift in Sources */,
+				4ED469AD1C2F135300438E46 /* PanelViewController.swift in Sources */,
 				4ED469BA1C2F193700438E46 /* Wallpaper.swift in Sources */,
 				4ED469AB1C2F135300438E46 /* AppDelegate.swift in Sources */,
 			);

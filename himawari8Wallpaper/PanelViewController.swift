@@ -16,10 +16,11 @@ class PanelViewController: NSViewController {
     @IBOutlet weak var startButton: NSButton!
     var isRunning = false
     let wallpaperManger = Wallpaper()
+    var timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startService()
         // Do any additional setup after loading the view.
     }
 
@@ -31,26 +32,27 @@ class PanelViewController: NSViewController {
 
     @IBAction func startButtonDidPress(sender: NSButton) {
         if isRunning {
-            startButton.title = "Stop Running"
+            startButton.title = "Start"
+            timer.invalidate()
+            isRunning = false
         }else{
-            startButton.title = "Start Running"
-            
-            
-            wallpaperManger.getImage(){
-                image in
-                self.perviewImage.image = self.wallpaperManger.image
-                self.wallpaperManger.setWallpaper(image)
-                if self.wallpaperManger.time != nil {
-                    self.imageTimeLabal.stringValue = self.wallpaperManger.time!
-                }
-            }
-           
-            
+            startService()
+            timer = NSTimer.scheduledTimerWithTimeInterval(15*60, target: self, selector: "startService", userInfo: nil, repeats: true)
         }
-        
-        isRunning = !isRunning
     }
     
+    func startService(){
+        startButton.title = "Stop"
+        isRunning = true
+        wallpaperManger.getImage(){
+            image in
+            self.perviewImage.image = self.wallpaperManger.image
+            self.wallpaperManger.setWallpaper(image)
+            if self.wallpaperManger.time != nil {
+                self.imageTimeLabal.stringValue = self.wallpaperManger.time!
+            }
+        }
+    }
     
 
 }

@@ -21,10 +21,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: "AppIcon")
             button.action = Selector("togglePopover:")
         }
-        guard let windowController = mainStoryboard.instantiateControllerWithIdentifier("popover2") as? NSViewController else {return}
+        guard let windowController = mainStoryboard.instantiateControllerWithIdentifier("popover") as? NSViewController else {return}
         
         popover.contentViewController = windowController
-        
     }
     
 
@@ -37,6 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
         } else {
             if let button = statusItem.button {
+                
                 popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
             }
         }

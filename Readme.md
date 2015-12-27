@@ -19,3 +19,6 @@ And still under development.
 ##Icon
 
 Icon is created by Rajesh Rajput @ Noun Project
+
+
+[![Buy me a coffee at ko-fi.com](https://az743702.vo.msecnd.net/cdn/btn1.png)](https://ko-fi.com?i=94665RH0D5FA)
