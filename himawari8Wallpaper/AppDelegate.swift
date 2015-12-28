@@ -21,9 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: "AppIcon")
             button.action = Selector("togglePopover:")
         }
-        guard let windowController = mainStoryboard.instantiateControllerWithIdentifier("popover") as? NSViewController else {return}
+        guard let windowController = mainStoryboard.instantiateControllerWithIdentifier("popover")  as? PanelViewController else {return}
         
         popover.contentViewController = windowController
+        togglePopover(nil)
+        togglePopover(nil)
     }
     
 

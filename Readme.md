@@ -9,7 +9,6 @@ And still under development.
 
 ##To-do
 
-- fetching
 - setting 
 	- select screens to set
 	- run at start up

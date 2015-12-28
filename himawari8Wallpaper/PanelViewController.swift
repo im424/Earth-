@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 class PanelViewController: NSViewController {
 
@@ -29,7 +30,21 @@ class PanelViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    @IBOutlet weak var test: NSTextField!
 
+    @IBAction func loginItemDidPressed(sender: NSButton) {
+    
+        let helperURL = NSBundle.mainBundle().bundleURL.URLByAppendingPathComponent("Contents/Resources/Contents/Library/LoginItems/himawari8Wallpaper Helper.app")
+       let status = LSRegisterURL(helperURL, false)
+        if status != 0 {
+            print("Fail to set login item \(status)")
+        }
+            
+        if !SMLoginItemSetEnabled("com.tokinhang.himawari8Wallpaper-Helper", sender.state == 1){
+            print("Fail to set login item")
+        }
+    }
     @IBAction func startButtonDidPress(sender: NSButton) {
         if isRunning {
             startButton.title = "Start"
@@ -41,6 +56,9 @@ class PanelViewController: NSViewController {
         }
     }
     
+    @IBAction func QuitButtonDidPressed(sender: AnyObject) {
+        NSApp.terminate(nil)
+    }
     func startService(){
         startButton.title = "Stop"
         isRunning = true

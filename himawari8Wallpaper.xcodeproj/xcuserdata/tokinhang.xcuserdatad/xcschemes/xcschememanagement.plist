@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>himawari8Wallpaper Helper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>himawari8Wallpaper.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>4ED469A61C2F135300438E46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4EE1E39D1C2FF6D4005F63FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
